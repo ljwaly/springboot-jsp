@@ -1,0 +1,45 @@
+
+spring: 
+  application: 
+    name: ljw-mysql-Test
+  resources:
+    static-locations: classpath:/publish/
+  mvc: 
+    view: 
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  activemq: 
+#    broker-url: tcp://192.168.1.210:9876
+#    user: admin   
+#    password: secret
+    pool: 
+      max-connections: 50
+      enabled: false
+    in-memory: true 
+      
+
+
+#  datasource: 
+#    url: jdbc:mysql://localhost:3306/testdb?useUnicode=true&characterEncoding=utf8
+#    username: root
+#    password: 1988ljw
+#    driverClassName: com.mysql.jdbc.Driver
+#    max-active: 20
+#    max-idle: 8
+#    min-idle: 8
+#    initial-size: 10      
+        
+server: 
+  port: 55555
+  servlet-path: /
+  
+
+
+#查看自动封装的配置数据源org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration 
+#需要springboot的mybatis的启动jar包支持
+#MybatisAutoConfiguration配置类内部会通过这个参数对SqlSessionFactory进行配置
+#mybatis: 
+#  mapper-locations: classpath*:com/mapper/*Mapper.xml
+#  type-aliases-package: com.ljw.dao
+
+  
